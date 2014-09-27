@@ -4,7 +4,15 @@
 
 <div class="listing members">
     {% for member in members %}
-      {% if not member.hide %}
+      {% if member.type == 'mentor' %}
+      <h2>Mentors</h2>
+      {% endif %}
+      {% if member.type == 'active' %}
+      <h2>Active Members</h2>
+      {% endif %}
+      {% if member.type == 'inactive' %}
+      <h2>Inactive Members</h2>
+      {% endif %}
       <div class="listing-item member">
         <div class="row">
             <div class="col-sm-4">
